@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수직 정렬</title>
+    <style>
+        .parent {
+            border: 5px solid #000;
+            width: 600px;
+            height: 300px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            background-color: rgb(230, 185, 192);
+            /* 각자의 컬럼내에서 수직으로 정렬 */
+            /* start end center stretch( 크기를 주지않으면 기본값인 녀석) */
+            align-items: stretch;
+        }
+        .parent div {
+            color: rgb(30, 34, 39);
+            text-align: center;
+            font-size: 30px;
+            background-color: rgb(247, 247, 228);
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div>1</div>
+        <div>2</div>
+    </div>
+</body>
+</html>

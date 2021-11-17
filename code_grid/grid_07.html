@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수직 수평 items와 content 차이</title>
+    <style>
+        .parent {
+            display: grid;
+            border: 5px solid #000;
+            background-color: deepskyblue;
+            grid-template-columns: auto auto auto;
+            
+            /* 숫자 하나면 상하좌우 , 두개면 상하 좌우 순 */
+            gap: 10px ;
+
+            /* column-gap: 10px; */
+            /* row-gap: 10px; */
+
+            /* items는 각자의 컬럼내에서이고 */
+            /* content는 자식요소를 수평으로 정렬 */
+            /* justify-content: center; */
+            /* justify-content: end; */
+
+            /* 자식요소를 수평으로 양 간격 맞춰서 양쪽정렬 */
+            /* justify-content: space-around; */
+
+            /* 자식요소를 수평으로 양쪽정렬,
+            첫번째 컬럼과 마지막 컬럼은 양끝 여백없이 붙어 정렬 */
+            justify-content: space-between;
+        }
+        .parent div {
+            color:  #fff;
+            text-align: center;
+            background-color: gold;
+            font-size: 30px;
+            width: 100px;
+            padding: 20px 0px;
+        }
+        /* padding 숫자 하나만 쓰면 상하좌우 두개 쓰면 상하 좌우 순 */
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            border: 10px solid rgb(231, 160, 79);
+            background-color: rgb(240, 229, 181);
+            width: 800px;
+            height: 400px;
+            justify-items: center;
+            align-items: center;
+        }
+        .parent div {
+            background-color: whitesmoke;
+            text-align: center;
+            font-size: 50px;
+            border: 8px solid tan;
+            padding: 15px;
+            width: 90px;
+            height: 70px;
+        }
+
+        /* 
+            CSS 적용 우선 순위
+
+            1. 속성 값 뒤에 important를 붙인 속성
+            2. HTML에서 시작태그에 style을 직접 지정한 속성
+            3. #id로 지정한 속성
+            4. .클래스, :추상클래스로 지정한 속성
+            5. 태그이름으로 지정한 속성
+            6. 상위객체에 의해 상속된 속성
+
+            같은 우선순위에 있는 경우 --> 보다 구체적으로 적은 선택자를 우선되어 적용
+
+        */
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div><a href="https://www.naver.com">1</a></div>
+
+        <div><a href="https://www.google.com"><img src="../img_html.png" alt="이미지가 없으면 글씨" width="60px" height="60px"></a></div>
+       
+        <div><img src="../img_01.png" alt="이미지불러오기 실패" width="60px" height="60px"></div>
+        
+        <div><a href="../grid_01.html">4</a></div>
+        
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+</body>
+</html>
