@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        /* 제일 바깥 레이아웃, 이 틀에 들어오게 되는 자식들의 배치를 담당*/
+        .parent {
+            display: grid;
+            grid-template-columns: 200px 1fr 200px;
+            grid-template-rows: 80px auto auto auto auto 80px;
+            grid-template-areas: 
+                'header header header'
+                'menu main top'
+                'menu main aside'
+                'menu main aside'
+                'menu main bottom'
+                'footer footer footer'
+            ;
+            height: 100vh;
+            gap: 10px;
+        }
+        /* 제일 바깥 레이아웃 안의 자식들 안의 배치를 담당 */
+        .parent div {
+            display: grid;
+            background-color: skyblue;
+            border: 1px solid #000;
+            text-align: center;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .menu {
+            grid-area: menu;
+        }
+
+        .main {
+            grid-area: main;
+        }
+
+        .top {
+            grid-area: top;
+        }
+
+        .aside {
+            grid-area: aside;
+        }
+
+        .bottom {
+            grid-area: bottom;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="header">header</div>
+        <div class="menu">menu</div>
+        <div class="main">main</div>
+        <div class="top">top</div>
+        <div class="aside">aside</div>
+        <div class="bottom">bottom</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>
