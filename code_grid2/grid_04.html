@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,29 +9,32 @@
     <style>
         .parent {
             display: grid;
-            border: 5px solid #000;
-            background-color: khaki;
+            border: 1px solid black;
+            background-color: rgb(248, 224, 8);
             display: grid;
+            width: 800px;
             grid-template-columns: auto auto auto;
             gap: 10px;
         }
+
         .parent div {
             color: #fff;
             text-align: center;
             font-size: 30px;
-            background-color: deepskyblue;
-
+            background-color: rgb(79, 228, 9);
         }
+
         .parent div.item {
-            background-color: crimson;
+            background-color: rgb(248, 102, 17);
             /* 라인 3까지 확장 n+1개념
                 컬럼기준라인 1에서 시작
                 컬럼기준라인 3에서 끝 */
-            grid-column-start : 1;
+            grid-column-start: 1;
             grid-column-end: 3;
         }
     </style>
 </head>
+
 <body>
     <div class="parent">
         <div class="item">1</div>
@@ -43,4 +47,5 @@
         <div>8</div>
     </div>
 </body>
+
 </html>

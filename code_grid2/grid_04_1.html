@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,21 +10,22 @@
         .parent {
             display: grid;
             border: 5px solid #000;
-            background-color: khaki;
+            background-color: rgb(248, 224, 8);
             display: grid;
             grid-template-columns: auto auto auto;
             gap: 10px;
         }
+
         .parent div {
             color: #fff;
             text-align: center;
             font-size: 30px;
-            background-color: deepskyblue;
+            background-color: rgb(79, 228, 9);
 
         }
 
-        .parent > .item {
-            background-color: crimson;
+        .parent>.item {
+            background-color: rgb(248, 102, 17);
             /* 정수 / 정수
                 자식요소 세로기준 시작위치/ 자식요소 세로기준 끝위치 */
             grid-column: 1 / 4;
@@ -31,6 +33,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="parent">
         <div class="item">1</div>
@@ -43,4 +46,5 @@
         <div>8</div>
     </div>
 </body>
+
 </html>
